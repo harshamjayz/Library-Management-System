@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="917.0" prefWidth="625.0" style="-fx-background-color: rgba(255,255,255,1.0);" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarysystem.controller.ManageMemberFormController">
+   <children>
+      <JFXTextField fx:id="txtMemberID" layoutX="57.0" layoutY="182.0" prefHeight="26.0" prefWidth="198.0" promptText="Member ID" />
+      <JFXTextField fx:id="txtName" layoutX="346.0" layoutY="182.0" prefHeight="26.0" prefWidth="198.0" promptText="Name" />
+      <JFXTextField fx:id="txtAdr" layoutX="57.0" layoutY="243.0" prefHeight="26.0" prefWidth="198.0" promptText="Address" />
+      <JFXTextField fx:id="txtNIC" layoutX="346.0" layoutY="244.0" prefHeight="25.0" prefWidth="198.0" promptText="National Identity Card No" />
+      <JFXTextField fx:id="txtContact" layoutX="57.0" layoutY="310.0" prefHeight="26.0" prefWidth="198.0" promptText="Contact No" />
+      <JFXButton fx:id="btnSave" layoutX="313.0" layoutY="311.0" onAction="#SaveClicked" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: #0da9cc;" text="Save" textFill="#101010" />
+      <JFXButton fx:id="btnClear" layoutX="439.0" layoutY="311.0" onAction="#ClearClicked" prefHeight="43.0" prefWidth="119.0" style="-fx-background-color: rgba(200,100,100,0.8);" text="Clear" />
+      <TableView fx:id="tblMember" layoutX="56.0" layoutY="442.0" onMouseClicked="#tblClicked" prefHeight="297.0" prefWidth="513.0">
+        <columns>
+          <TableColumn prefWidth="69.0" text="Member ID" />
+          <TableColumn prefWidth="96.0" text="Name" />
+            <TableColumn prefWidth="93.0" text="NIC" />
+            <TableColumn prefWidth="125.0" text="Address" />
+            <TableColumn prefWidth="128.0" text="Contact No" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="87.0" fitWidth="86.0" layoutX="25.0" layoutY="22.0" onMouseClicked="#HomeClicked" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/Home_96px.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="156.0" layoutY="57.0" prefHeight="50.0" prefWidth="298.0" text="Manage Members" textFill="#347d94">
+         <font>
+            <Font name="System Bold" size="33.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnReport" layoutX="323.0" layoutY="795.0" onAction="#ReportClicked" prefHeight="43.0" prefWidth="173.0" style="-fx-background-color: rgba(200,100,100,0.8);" text="Reports" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.librarysystem.controller.TableController">
+   <children>
+      <TableView fx:id="tblMem" layoutX="52.0" layoutY="39.0" prefHeight="200.0" prefWidth="506.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="Member ID" />
+          <TableColumn prefWidth="75.0" text="Member Name" />
+            <TableColumn prefWidth="75.0" text="Address" />
+            <TableColumn prefWidth="75.0" text="NIC" />
+            <TableColumn prefWidth="75.0" text="Contatct No" />
+        </columns>
+      </TableView>
+      <JFXButton fx:id="btnAdd" layoutX="384.0" layoutY="273.0" onAction="#Clicked" text="Add" />
+      <Button layoutX="111.0" layoutY="261.0" mnemonicParsing="false" onAction="#Button" text="Button" />
+   </children>
+</AnchorPane>

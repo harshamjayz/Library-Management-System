@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T10:33:52 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BookReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b236a39d-d8b5-4ed7-9d1c-cbe0c3320544">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Test"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Name" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from book;]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="name" class="java.lang.String"/>
+	<field name="isbn" class="java.lang.String"/>
+	<field name="availability" class="java.lang.Boolean"/>
+	<field name="author" class="java.lang.String"/>
+	<field name="publisher" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="230" y="30" width="129" height="30" uuid="348b7b46-0780-4da4-aa3a-8507969130fe"/>
+				<textElement>
+					<font size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Book Report]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="45" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="95" height="30" uuid="a4be1fbc-c59d-4e99-9133-4c4d84080c42"/>
+				<text><![CDATA[id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="0" width="92" height="30" uuid="2b00a9c1-bbb8-4736-b596-8cb4eb73f418"/>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="187" y="0" width="92" height="30" uuid="32a5a91b-cc2c-4fcc-bd7a-af8db98ec56e"/>
+				<text><![CDATA[isbn]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="279" y="0" width="92" height="30" uuid="e3024ad1-9960-416c-aea2-6df02c64d3ec"/>
+				<text><![CDATA[availability]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="371" y="0" width="92" height="30" uuid="f626e7ea-f5a8-4787-8f5f-a6b90aed193c"/>
+				<text><![CDATA[author]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="463" y="0" width="92" height="30" uuid="505b1250-d8a1-4cd5-a0d0-89a4eb7c2520"/>
+				<text><![CDATA[publisher]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="58" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="21" width="95" height="30" uuid="7110ca70-55be-4617-bcf0-c8cd9624080d"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="95" y="21" width="92" height="30" uuid="b803e69b-6d61-4717-8334-2c37b53a3272"/>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="187" y="21" width="92" height="30" uuid="46537f44-9378-48b5-8594-69429c89b335"/>
+				<textFieldExpression><![CDATA[$F{isbn}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="279" y="21" width="92" height="30" uuid="8140fe8d-f864-4fb3-a956-124b599912bf"/>
+				<textFieldExpression><![CDATA[$F{availability}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="371" y="21" width="92" height="30" uuid="6f36a2d0-963b-43e8-b4b8-0c3b436071ae"/>
+				<textFieldExpression><![CDATA[$F{author}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="463" y="21" width="92" height="30" uuid="e40dfbb2-2063-4f29-a5a1-1667ddaa00a2"/>
+				<textFieldExpression><![CDATA[$F{publisher}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

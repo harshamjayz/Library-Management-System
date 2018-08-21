@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2018-06-12T09:33:14 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="BorrowCharts" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00a6588c-a06d-4731-9ecf-942a791a81ab">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Test"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select * , count(borrowid) from borrow group by bookid;]]>
+	</queryString>
+	<field name="borrowid" class="java.lang.String"/>
+	<field name="mid" class="java.lang.String"/>
+	<field name="bookid" class="java.lang.String"/>
+	<field name="borrowdate" class="java.sql.Date"/>
+	<field name="count(borrowid)" class="java.lang.Long"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<summary>
+		<band height="231" splitType="Stretch">
+			<areaChart>
+				<chart evaluationTime="Report">
+					<reportElement x="10" y="15" width="510" height="200" uuid="34187a7a-bf4a-47d1-af54-9932db4cdaa7"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{borrowdate}]]></seriesExpression>
+						<categoryExpression><![CDATA[$F{bookid}]]></categoryExpression>
+						<valueExpression><![CDATA[$F{count(borrowid)}]]></valueExpression>
+					</categorySeries>
+				</categoryDataset>
+				<areaPlot>
+					<plot/>
+					<categoryAxisFormat>
+						<axisFormat/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat/>
+					</valueAxisFormat>
+				</areaPlot>
+			</areaChart>
+		</band>
+	</summary>
+</jasperReport>
